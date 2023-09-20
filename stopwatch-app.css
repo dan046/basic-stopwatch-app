@@ -1,0 +1,88 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--font-white);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Background */
+  --bg-black: rgb(35, 35, 35);
+  --bg-blueish: rgb(0, 113, 226);
+  --bg-gray: rgb(104, 104, 104);
+  --bg-dark-gray: rgb(68, 68, 68);
+  --bg-green: rgb(0, 173, 20);
+  --bg-dark-green: rgb(0, 118, 14);
+
+  /* Font Color */
+  --font-white: rgb(255, 255, 255);
+
+  /* Hover Color */
+  --bg-dark-blue: rgb(0, 85, 171);
+}
+
+body {
+  background-color: var(--bg-black);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  display: flex;
+
+  .stopwatch-label {
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: default;
+    user-select: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .clock-container {
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+      font-weight: 600;
+      display: flex;
+      height: 100px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+      .start-button {
+        background-color: var(--bg-blueish);
+      }
+      .start-button:hover {
+        background-color: var(--bg-dark-blue);
+        transition: all 200ms ease-in-out;
+      }
+      .pause-button {
+        background-color: var(--bg-green);
+      }
+      .pause-button:hover {
+        background-color: var(--bg-dark-green);
+        transition: all 200ms ease-in-out;
+      }
+      .reset-button {
+        background-color: var(--bg-gray);
+      }
+      .reset-button:hover {
+        background-color: var(--bg-dark-gray);
+        transition: all 200ms ease-in-out;
+      }
+    }
+  }
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  user-select: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+}
